@@ -38,6 +38,10 @@ namespace swisseph {
   void swe_set_ephe_path(const char* path);
   void swe_close();
   std::string getPath();
+
+  // Newly added functions
+  double swe_time_equ(double tjd_ut);
+  double swe_rise_trans(double tjd_ut, int ipl, const std::string &starname, int epheflag, int rsmi, double atpress, double attemp);
 }
 
 #endif /* SWISSEPH_H */

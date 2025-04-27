@@ -246,6 +246,18 @@ export interface Spec extends TurboModule {
   };
 
   getHarmonyResfilePath(): string;
+
+  sweTimeEqu(tjd: number): number;
+
+  sweRiseTrans(
+    tjdUt: number,
+    planet: number,
+    startName: string,
+    iflag: number,
+    rsmi: number,
+    atPressure: number,
+    atTemperature: number
+  ): number;
 }
 
 export default TurboModuleRegistry.getEnforcing<Spec>('Swisseph');
