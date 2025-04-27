@@ -335,6 +335,30 @@ export function getHarmonyResfilePath(): string {
   return '';
 }
 
+export function sweTimeEqu(tjd: number): number {
+  return Native.sweTimeEqu(tjd);
+}
+
+export function sweRiseTrans(
+  tjdUt: number,
+  planet: number,
+  starName: string,
+  epheflag: number,
+  rsmi: number,
+  atPressure: number,
+  atTemperature: number
+): number {
+  return Native.sweRiseTrans(
+    tjdUt,
+    planet,
+    starName,
+    epheflag,
+    rsmi,
+    atPressure,
+    atTemperature
+  );
+}
+
 export const Swisseph = SwissephLib;
 
 export default {
@@ -363,6 +387,8 @@ export default {
   sweHeliacalUt,
   sweVisLimitMag,
   sweNodApsUt,
+  sweTimeEqu,
+  sweRiseTrans,
   getHarmonyResfilePath,
   ...SwissephLib,
 };

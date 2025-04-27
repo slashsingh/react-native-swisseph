@@ -21,6 +21,13 @@ buildscript {
   }
 }
 
+ext {
+  compileSdkVersion = 34
+  targetSdkVersion = 34
+  minSdkVersion = 24
+  ndkVersion = "25.2.9519653"
+}
+
 def reactNativeArchitectures() {
   def value = rootProject.getProperties().get("reactNativeArchitectures")
   return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
@@ -66,11 +73,11 @@ android {
   }
 
   ndkVersion getExtOrDefault("ndkVersion")
-  compileSdkVersion getExtOrIntegerDefault("compileSdkVersion")
+  compileSdkVersion 34
 
   defaultConfig {
-    minSdkVersion getExtOrIntegerDefault("minSdkVersion")
-    targetSdkVersion getExtOrIntegerDefault("targetSdkVersion")
+    minSdkVersion 24
+    targetSdkVersion 34
     buildConfigField "boolean", "IS_NEW_ARCHITECTURE_ENABLED", isNewArchitectureEnabled().toString()
 
     externalNativeBuild {

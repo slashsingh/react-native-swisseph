@@ -1,2 +1,8 @@
-apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings)
-includeBuild('../node_modules/@react-native/gradle-plugin')
+// Include the community cli-platform for native modules
+apply from: file("../node_modules/@react-native-community/cli-platform-android/native_modules.gradle");
+
+// Apply native module settings
+applyNativeModulesSettingsGradle(settings);
+
+// Include the React Native Gradle plugin build configuration
+includeBuild('../node_modules/@react-native/gradle-plugin');

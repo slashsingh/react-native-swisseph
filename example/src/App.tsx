@@ -1,7 +1,9 @@
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-swisseph';
+import { Text, View, StyleSheet } from 'react-native';
+import { sweTimeEqu } from 'react-native-swisseph';
 
-const result = multiply(3, 7);
+const result = sweTimeEqu(
+  2451545.0 // Julian Day
+);
 
 export default function App() {
   return (
@@ -16,10 +18,5 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
   },
 });

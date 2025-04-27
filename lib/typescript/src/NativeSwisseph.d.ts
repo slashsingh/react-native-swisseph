@@ -144,6 +144,8 @@ export interface Spec extends TurboModule {
         aphelion: number[];
     };
     getHarmonyResfilePath(): string;
+    sweTimeEqu(tjd: number): number;
+    sweRiseTrans(tjdUt: number, planet: number, startName: string, iflag: number, rsmi: number, atPressure: number, atTemperature: number): number;
 }
 declare const _default: Spec;
 export default _default;

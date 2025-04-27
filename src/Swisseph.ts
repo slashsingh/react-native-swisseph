@@ -1,3 +1,4 @@
+/* eslint-disable no-bitwise */
 const Swisseph = {
   SE_JUL_CAL: 0,
   SE_GREG_CAL: 1,
