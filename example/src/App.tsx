@@ -1,8 +1,14 @@
 import { Text, View, StyleSheet } from 'react-native';
-import { sweTimeEqu } from 'react-native-swisseph';
+import { sweRiseTrans } from 'react-native-swisseph';
 
-const result = sweTimeEqu(
-  2451545.0 // Julian Day
+const result = sweRiseTrans(
+  2451545.0, // Julian date
+  0, // Longitude
+  '', // Latitude
+  0, // Elevation
+  0, // Time zone
+  0, // Observer's height above sea level
+  0 // Delta T
 );
 
 export default function App() {
